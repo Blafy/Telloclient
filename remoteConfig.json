@@ -1,0 +1,670 @@
+{
+    "TIMEZONE": "Europe/Paris",
+    "CLOSINGHOURS": [],
+    "TAILLEBOUTONS": 45,
+    "GRILLEBOUTONS": 6,
+    "ACTIONS": {
+      "IncrementForward": {
+        "START": "IncrementForward",
+        "STOP": ""
+      },
+      "IncrementBackward": {
+        "START": "IncrementBackward",
+        "STOP": ""
+      },
+      "IncrementTurnLeft": {
+        "START": "IncrementTurnLeft",
+        "STOP": ""
+      },
+      "IncrementTurnRight": {
+        "START": "IncrementTurnRight",
+        "STOP": ""
+      },
+      "Forward": {
+        "START": "Forward",
+        "STOP": "Forward"
+      },
+      "Backward": {
+        "START": "Backward",
+        "STOP": "Backward"
+      },
+      "TurnLeft": {
+        "START": "TurnLeft",
+        "STOP": "TurnLeft"
+      },
+      "TurnRight": {
+        "START": "TurnRight",
+        "STOP": "TurnRight"
+      },
+      "Boost": {
+        "START": "Boost",
+        "STOP": "Boost"
+      },
+      "Brake": {
+        "START": "Brake",
+        "STOP": ""
+      },
+      "PreviousTool": {
+        "START": "PreviousTool",
+        "STOP": ""
+      },
+      "ResetTools": {
+        "START": "ResetTools",
+        "STOP": ""
+      },
+      "NextTool": {
+        "START": "NextTool",
+        "STOP": ""
+      },
+      "Switch0": {
+        "START": "Enable0",
+        "STOP": "Disable0"
+      },
+      "Switch1": {
+        "START": "Enable1",
+        "STOP": "Disable1"
+      },
+      "Switch2": {
+        "START": "Enable2",
+        "STOP": "Disable2"
+      },
+      "Switch3": {
+        "START": "Invert3",
+        "STOP": ""
+      },
+      "Switch4": {
+        "START": "Invert4",
+        "STOP": ""
+      },
+      "Switch5": {
+        "START": "Invert5",
+        "STOP": ""
+      },
+      "Switch6": {
+        "START": "Enable6",
+        "STOP": "Disable6"
+      },
+      "Switch7": {
+        "START": "Invert7",
+        "STOP": ""
+      },
+      "Sleep": {
+        "START": "Sleep",
+        "STOP": ""
+      },
+      "SetGpsHome": {
+        "START": "SetGpsHome",
+        "STOP": ""
+      },
+      "ExitRobot": {
+        "START": "ExitRobot",
+        "STOP": ""
+      },
+      "RebootRobot": {
+        "START": "RebootRobot",
+        "STOP": ""
+      },
+      "PowerOffRobot": {
+        "START": "PowerOffRobot",
+        "STOP": ""
+      }
+    },
+    "BOUTONS": [
+      {
+        "IMAGE0": "switch0",
+        "IMAGE1": "switch1",
+        "TEXTE": "Take off",
+        "ACTION": "Switch0",
+        "SPECIAL": "i0"
+      },
+      {
+        "IMAGE0": "switch0",
+        "IMAGE1": "switch1",
+        "TEXTE": "Land",
+        "ACTION": "Switch1",
+        "SPECIAL": "i1"
+      },
+      {
+        "IMAGE0": "vide",
+        "IMAGE1": "",
+        "TEXTE": "",
+        "ACTION": "",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "avancer",
+        "IMAGE1": "",
+        "TEXTE": "Forward",
+        "ACTION": "IncrementForward",
+        "SPECIAL": "yp"
+      },
+      {
+        "IMAGE0": "vide",
+        "IMAGE1": "",
+        "TEXTE": "",
+        "ACTION": "",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "suivant",
+        "IMAGE1": "",
+        "TEXTE": "Next tool",
+        "ACTION": "NextTool",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "sirene0",
+        "IMAGE1": "sirene1",
+        "TEXTE": "Buzzer",
+        "ACTION": "Switch2",
+        "SPECIAL": "i2"
+      },
+      {
+        "IMAGE0": "lumicont0",
+        "IMAGE1": "lumicont1",
+        "TEXTE": "Maximize the brightness and contrast",
+        "ACTION": "Switch3",
+        "SPECIAL": "i3"
+      },
+      {
+        "IMAGE0": "gauche",
+        "IMAGE1": "",
+        "TEXTE": "Left",
+        "ACTION": "IncrementTurnLeft",
+        "SPECIAL": "zn"
+      },
+      {
+        "IMAGE0": "stopper",
+        "IMAGE1": "",
+        "TEXTE": "Click to stop or drag to drive",
+        "ACTION": "Brake",
+        "SPECIAL": "st"
+      },
+      {
+        "IMAGE0": "droite",
+        "IMAGE1": "",
+        "TEXTE": "Right",
+        "ACTION": "IncrementTurnRight",
+        "SPECIAL": "zp"
+      },
+      {
+        "IMAGE0": "centrer",
+        "IMAGE1": "",
+        "TEXTE": "Reset tools",
+        "ACTION": "ResetTools",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "radio0",
+        "IMAGE1": "radio1",
+        "TEXTE": "Activate drone video stream",
+        "ACTION": "Switch4",
+        "SPECIAL": "i4"
+      },
+      {
+        "IMAGE0": "switch0",
+        "IMAGE1": "switch1",
+        "TEXTE": "EMERGENCY stop all motors",
+        "ACTION": "Switch5",
+        "SPECIAL": "i5"
+      },
+      {
+        "IMAGE0": "vide",
+        "IMAGE1": "",
+        "TEXTE": "",
+        "ACTION": "",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "reculer",
+        "IMAGE1": "",
+        "TEXTE": "Backward",
+        "ACTION": "IncrementBackward",
+        "SPECIAL": "yn"
+      },
+      {
+        "IMAGE0": "capture",
+        "IMAGE1": "",
+        "TEXTE": "Capture the last seconds of video",
+        "ACTION": "",
+        "SPECIAL": "capture"
+      },
+      {
+        "IMAGE0": "precedent",
+        "IMAGE1": "",
+        "TEXTE": "Previous tool",
+        "ACTION": "PreviousTool",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "switch0",
+        "IMAGE1": "switch1",
+        "TEXTE": "Front flip",
+        "ACTION": "Switch6",
+        "SPECIAL": "i6"
+      },
+      {
+        "IMAGE0": "switch0",
+        "IMAGE1": "switch1",
+        "TEXTE": "Switch 7",
+        "ACTION": "Switch7",
+        "SPECIAL": "i7"
+      },
+      {
+        "IMAGE0": "lock0",
+        "IMAGE1": "lock1",
+        "TEXTE": "Unlink remote control and video",
+        "ACTION": "",
+        "SPECIAL": "switchlock"
+      },
+      {
+        "IMAGE0": "osd0",
+        "IMAGE1": "osd1",
+        "TEXTE": "Toggle OSD",
+        "ACTION": "",
+        "SPECIAL": "switchosd"
+      },
+      {
+        "IMAGE0": "vide",
+        "IMAGE1": "",
+        "TEXTE": "",
+        "ACTION": "",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "dodo",
+        "IMAGE1": "",
+        "TEXTE": "Put on standby",
+        "ACTION": "Sleep",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "resetodometrie",
+        "IMAGE1": "",
+        "TEXTE": "Set GPS home",
+        "ACTION": "SetGpsHome",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "vide",
+        "IMAGE1": "",
+        "TEXTE": "",
+        "ACTION": "",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "vide",
+        "IMAGE1": "",
+        "TEXTE": "",
+        "ACTION": "",
+        "SPECIAL": ""
+      },
+      {
+        "IMAGE0": "exit",
+        "IMAGE1": "",
+        "TEXTE": "Restart the client process",
+        "ACTION": "ExitRobot",
+        "SPECIAL": "confirm"
+      },
+      {
+        "IMAGE0": "reboot",
+        "IMAGE1": "",
+        "TEXTE": "Reboot the system",
+        "ACTION": "RebootRobot",
+        "SPECIAL": "confirm"
+      },
+      {
+        "IMAGE0": "poweroff",
+        "IMAGE1": "",
+        "TEXTE": "Power off the system",
+        "ACTION": "PowerOffRobot",
+        "SPECIAL": "confirm"
+      }
+    ],
+    "MIXAGES": [
+      {
+        "COULEUR": "#ffff00",
+        "GROUPE": 0,
+        "WRAPX": false,
+        "WRAPY": false,
+        "REINITX": true,
+        "REINITY": true,
+        "X": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "Y": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "COULEUR": "#ffffff",
+        "GROUPE": 1,
+        "WRAPX": false,
+        "WRAPY": false,
+        "REINITX": false,
+        "REINITY": false,
+        "X": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "Y": [
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "COMMANDES": [
+      {
+        "NOM": "Turret control",
+        "CAMERA": 0,
+        "MIXAGE": 0,
+        "GAINX": 80,
+        "GAINY": 80
+      },
+      {
+        "NOM": "Gripper control",
+        "CAMERA": 1,
+        "MIXAGE": 1,
+        "GAINX": 80,
+        "GAINY": 80
+      }
+    ],
+    "DEFAUTCOMMANDE": 0,
+    "PASX": 8,
+    "PASY": 8,
+    "PASZ": 8,
+    "TOUCHESX": 64,
+    "TOUCHESY": 64,
+    "TOUCHESZ": 64,
+    "BOOSTSX": 128,
+    "BOOSTSY": 128,
+    "BOOSTSZ": 128,
+    "OSDX": 960,
+    "OSDY": 720,
+    "TX": {
+      "SYNC": [
+        "$",
+        "S",
+        " ",
+        " "
+      ],
+      "COMMANDES32": [],
+      "COMMANDES16": [
+        {
+          "NOM": "Turret X",
+          "INIT": 0,
+          "ECHELLEMIN": -180,
+          "ECHELLEMAX": 180,
+          "MIN": -135,
+          "MAX": 135,
+          "BRIDEMIN": -20,
+          "BRIDEMAX": 20,
+          "SIGNE": true,
+          "NBCHIFFRES": 2,
+          "UNITE": "°"
+        },
+        {
+          "NOM": "Turret Y",
+          "INIT": 0,
+          "ECHELLEMIN": -180,
+          "ECHELLEMAX": 180,
+          "MIN": -55,
+          "MAX": 55,
+          "BRIDEMIN": -40,
+          "BRIDEMAX": 20,
+          "SIGNE": true,
+          "NBCHIFFRES": 2,
+          "UNITE": "°"
+        },
+        {
+          "NOM": "Gripper X",
+          "INIT": 0,
+          "ECHELLEMIN": -180,
+          "ECHELLEMAX": 180,
+          "MIN": -30,
+          "MAX": 65,
+          "BRIDEMIN": -20,
+          "BRIDEMAX": 65,
+          "SIGNE": true,
+          "NBCHIFFRES": 2,
+          "UNITE": "°"
+        },
+        {
+          "NOM": "Gripper Y",
+          "INIT": 0,
+          "ECHELLEMIN": -180,
+          "ECHELLEMAX": 180,
+          "MIN": -40,
+          "MAX": 80,
+          "BRIDEMIN": 0,
+          "BRIDEMAX": 45,
+          "SIGNE": true,
+          "NBCHIFFRES": 2,
+          "UNITE": "°"
+        }
+      ],
+      "CHOIXCAMERAS": [
+        0
+      ],
+      "COMMANDES8": [
+        {
+          "NOM": "Velocity X",
+          "INIT": 0,
+          "ECHELLEMIN": -100,
+          "ECHELLEMAX": 100,
+          "MIN": -100,
+          "MAX": 100,
+          "BRIDEMIN": -50,
+          "BRIDEMAX": 50,
+          "SIGNE": true,
+          "NBCHIFFRES": 1,
+          "UNITE": " %"
+        },
+        {
+          "NOM": "Velocity Y",
+          "INIT": 0,
+          "ECHELLEMIN": -100,
+          "ECHELLEMAX": 100,
+          "MIN": -100,
+          "MAX": 100,
+          "BRIDEMIN": -50,
+          "BRIDEMAX": 50,
+          "SIGNE": true,
+          "NBCHIFFRES": 1,
+          "UNITE": " %"
+        },
+        {
+          "NOM": "Velocity Theta",
+          "INIT": 0,
+          "ECHELLEMIN": -100,
+          "ECHELLEMAX": 100,
+          "MIN": -100,
+          "MAX": 100,
+          "BRIDEMIN": -50,
+          "BRIDEMAX": 50,
+          "SIGNE": true,
+          "NBCHIFFRES": 1,
+          "UNITE": " %"
+        }
+      ],
+      "COMMANDES1": [
+        {
+          "NOM": "Left IR LED",
+          "INIT": 0
+        },
+        {
+          "NOM": "Right IR LED",
+          "INIT": 0
+        },
+        {
+          "NOM": "Buzzer",
+          "INIT": 0
+        },
+        {
+          "NOM": "Brightness boost",
+          "INIT": 0
+        },
+        {
+          "NOM": "Switch 4",
+          "INIT": 0
+        },
+        {
+          "NOM": "Switch 5",
+          "INIT": 0
+        },
+        {
+          "NOM": "Switch 6",
+          "INIT": 0
+        },
+        {
+          "NOM": "Switch 7",
+          "INIT": 0
+        }
+      ]
+    },
+    "RX": {
+      "SYNC": [
+        "$",
+        "R",
+        " ",
+        " "
+      ],
+      "VALEURS32": [],
+      "VALEURS16": [
+        {
+          "NOM": "Voltage",
+          "INIT": 3,
+          "ECHELLEMIN": 2.5,
+          "ECHELLEMAX": 4.5,
+          "MIN": 3,
+          "MAX": 4.2,
+          "SIGNE": false,
+          "NBCHIFFRES": 2,
+          "UNITE": " V"
+        },
+        {
+          "NOM": "Battery",
+          "INIT": 0,
+          "ECHELLEMIN": 0,
+          "ECHELLEMAX": 100,
+          "MIN": 0,
+          "MAX": 100,
+          "SIGNE": false,
+          "NBCHIFFRES": 2,
+          "UNITE": " %"
+        }
+      ],
+      "VALEURS8": [
+        {
+          "NOM": "CPU load",
+          "INIT": 0,
+          "ECHELLEMIN": 0,
+          "ECHELLEMAX": 100,
+          "MIN": 0,
+          "MAX": 100,
+          "SIGNE": false,
+          "NBCHIFFRES": 0,
+          "UNITE": " %"
+        },
+        {
+          "NOM": "SoC temp",
+          "INIT": 10,
+          "ECHELLEMIN": 10,
+          "ECHELLEMAX": 80,
+          "MIN": 10,
+          "MAX": 80,
+          "SIGNE": false,
+          "NBCHIFFRES": 1,
+          "UNITE": " °C"
+        },
+        {
+          "NOM": "Link",
+          "INIT": 30,
+          "ECHELLEMIN": 30,
+          "ECHELLEMAX": 70,
+          "MIN": 30,
+          "MAX": 70,
+          "SIGNE": false,
+          "NBCHIFFRES": 0,
+          "UNITE": ""
+        },
+        {
+          "NOM": "RSSI",
+          "INIT": -80,
+          "ECHELLEMIN": -80,
+          "ECHELLEMAX": 0,
+          "MIN": -80,
+          "MAX": 0,
+          "SIGNE": true,
+          "NBCHIFFRES": 0,
+          "UNITE": " dBm"
+        },
+        {
+          "NOM": "Tello Battery",
+          "INIT": 0,
+          "ECHELLEMIN": 0,
+          "ECHELLEMAX": 100,
+          "MIN": 0,
+          "MAX": 100,
+          "SIGNE": false,
+          "NBCHIFFRES": 0,
+          "UNITE": " %"
+        },
+        {
+          "NOM": "Tello VPU temp",
+          "INIT": 0,
+          "ECHELLEMIN": 0,
+          "ECHELLEMAX": 100,
+          "MIN": 0,
+          "MAX": 100,
+          "SIGNE": false,
+          "NBCHIFFRES": 0,
+          "UNITE": " °C"
+        },
+        {
+          "NOM": "Indoor Altitude",
+          "INIT": 0,
+          "ECHELLEMIN": 0,
+          "ECHELLEMAX": 255,
+          "MIN": 0,
+          "MAX": 255,
+          "SIGNE": false,
+          "NBCHIFFRES": 0,
+          "UNITE": "cm"
+        },
+        {
+          "NOM": "Tello V speed",
+          "INIT": 0,
+          "ECHELLEMIN": -100,
+          "ECHELLEMAX": 100,
+          "MIN": -100,
+          "MAX": 100,
+          "SIGNE": true,
+          "NBCHIFFRES": 0,
+          "UNITE": "cm/s"
+        },
+        {
+          "NOM": "Tello H speed",
+          "INIT": 0,
+          "ECHELLEMIN": 0,
+          "ECHELLEMAX": 100,
+          "MIN": 0,
+          "MAX": 100,
+          "SIGNE": false,
+          "NBCHIFFRES": 0,
+          "UNITE": "cm/s"
+        }
+      ]
+    },
+    "OPENSTREETMAP": false
+  }

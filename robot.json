@@ -1,0 +1,54 @@
+{
+ "SERVEURS": ["https://www.vigibot.com"],
+
+ "NOM": "x",
+ "PASSWORD": "xx",
+
+ "CMDDIFFUSION": [
+  [
+   "/usr/local/vigiclient/processdiffusion",
+   " /dev/video0",
+   " | /bin/nc 127.0.0.1 VIDEOLOCALPORT",
+   " -w 2"
+  ], [
+   "/usr/local/vigiclient/processdiffvideo",
+   " -loglevel fatal",
+   " -f fbdev",
+   " -r FPS",
+   " -i /dev/fb0",
+   " -c:v h264_omx",
+   " -profile:v baseline",
+   " -b:v BITRATE",
+   " -flags:v +global_header",
+   " -bsf:v dump_extra",
+   " -f rawvideo",
+   " tcp://127.0.0.1:VIDEOLOCALPORT"
+  ], [
+   "/usr/local/vigiclient/processdiffcustm",
+   " -loglevel fatal",
+   " -r FPS",
+   " -i udp://0.0.0.0:11111",
+   " -c:v h264_omx",
+   " -profile:v baseline",
+   " -b:v BITRATE",
+   " -flags:v +global_header",
+   " -bsf:v dump_extra",
+   " -f rawvideo",
+   " tcp://127.0.0.1:VIDEOLOCALPORT"
+  ], [
+    "/usr/local/vigiclient/processdiffintro",
+    " -loglevel fatal",
+    " -stream_loop -1",
+    " -re",
+    " -i /usr/local/vigiclient/intro",
+    " -c:v h264_omx",
+    " -profile:v baseline",
+    " -b:v BITRATE",
+    " -flags:v +global_header",
+    " -bsf:v dump_extra",
+    " -f rawvideo",
+    " tcp://127.0.0.1:VIDEOLOCALPORT"
+   ]
+ ]
+
+}
