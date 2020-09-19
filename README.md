@@ -20,7 +20,7 @@ So I thought it could be a fun project to develop a relay between the drone and 
 
 For now, my code uses the protocol in the official SDK from Ryze. It is simple to implement because it's made of string commands to send through UDP, like ```takeoff```. However, it's not the optimal choice, because the smartphone application uses a different protocol (not documented) with more functionnalities and logs. Some [libraries](https://github.com/hanyazou/TelloPy) uses this retro-engineering phone API to talk with the drone.    
 
-The main thread is sync with vigibot trames coming from serial. A seperate thread takes care of receiving tello "state" packets, a thread send vigibot RX trames and a 1-sesonc timer take care of the streamon/off command.    
+The main thread is sync with vigibot trames coming from serial. A seperate thread takes care of receiving tello "state" packets, a thread sends vigibot RX trames and a 1-second timer take care of the streamon/off command.    
 
 The architecture is under developpement and the code is messy, some revisions are coming. However no thread locks are required and the parsing is failproof. 
 
@@ -28,7 +28,7 @@ The architecture is under developpement and the code is messy, some revisions ar
 
 1. To begin with, you need to create a robot on Vigibot. Use the default config.
 
-2. Install the [Vigibot client]( ) on your Raspi. Make sure the service runs, and follow the instructions to auth the client (robot/password)
+2. Install the [Vigibot client](https://github.com/vigibot/vigiclient) on your Raspi. Make sure the service runs, and follow the instructions to auth the client (robot/password)
 
 3. Clone this repo. You will find the configs for the client (robot.json) and 2 configs to change in the vigibot interface (remote.json and hardware.json)
 
@@ -36,8 +36,8 @@ The architecture is under developpement and the code is messy, some revisions ar
 
 5. Configure your WLAN interface to connect to the drone. (modify `wpa_supplicant.conf`)
 
-6. Run "pip3 install -r requirement.txt" in order to install the dependancies.
+6. Run "pip3 install -r requirement.txt" in order to install the dependencies.
 
-7. Finally, turn on your Tello and run `sudo python3 telloclient.py`. Note that sudo is required to write to the virtual interface. 
+7. Finally, turn on your Tello and run `python3 telloclient.py`. Note that sudo is required to write to the virtual interface, or you can run script in usermode if you change the permissions.
 
 8. If everythings is alright, you should see the threads frequencies in the console. It should be ~20Hz, ~10Hz and ~10Hz. 
