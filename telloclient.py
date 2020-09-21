@@ -122,7 +122,7 @@ def telloReceiveState():
         newT = time.time()
         freqTello = 1/(newT - syncTelloTime)
         syncTelloTime = newT
-        print(data)
+        #print(data)
 
 def getTelloStateValue(state :str):
     val = telloStateTrame[TELLOSTATESTRUCTURE.index(state)]
